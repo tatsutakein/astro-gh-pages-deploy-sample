@@ -1,0 +1,60 @@
+name: 'Deploy'
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      # https://github.com/marketplace/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      # https://github.com/marketplace/actions/mise-action
+      - name: mise action
+        uses: jdx/mise-action@3e282fcd55c8de21f232397e9fb876cd33e612f1 # v2.0.3
+
+      - name: Install deps
+        run: bun install
+
+      - name: Build
+        run: bun run build
+
+      # https://github.com/marketplace/actions/create-github-app-token
+      - name: Create GitHub App Token
+        uses: actions/create-github-app-token@6c406e8a244fdf6bbf79e6cc8a91504a48d2c2ce # v1.9.2
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
+      # TODO: ビルドとデプロイを別 Job 化
+
+      # https://github.com/marketplace/actions/checkout
+      - name: Checkout deploy website repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          repository: 'tatsutakein/static-website-gh-pages-sample'
+          token: ${{ steps.app-token.outputs.token }}
+          ref: 'gh-pages'
+          path: 'deploy/website'
+
+      - name: Copy deploy files
+        run: |
+          rm -rf deploy/website/*
+          cp -a dist/. deploy/website
+
+      - name: Push deploy repository
+        run: |
+          git add .
+          git commit -m "Deploy from ${{ github.repository }} ${{ github.sha }}"
+          git push origin gh-pages
+        working-directory: deploy/website
