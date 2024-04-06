@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.5.0...v0.5.1) (2024-04-06)
+
+
+### Bug Fixes
+
+* set git config ([3f61029](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/commit/3f61029dd48692226ab69fdcb74c606f942405f3))
+
 ## [0.5.0](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.4.1...v0.5.0) (2024-04-06)
 
 
