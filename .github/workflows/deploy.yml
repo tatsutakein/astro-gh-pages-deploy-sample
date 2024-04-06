@@ -54,8 +54,8 @@ jobs:
 
       - name: Push deploy repository
         run: |
-          git -c user.email "develop@tatsutakein.jp"
-          git -c user.name "tatsutakein"
+          git config user.email "develop@tatsutakein.jp"
+          git config user.name "tatsutakein"
 
           git add .
           git commit -m "Deploy from ${{ github.repository }} ${{ github.sha }}"
