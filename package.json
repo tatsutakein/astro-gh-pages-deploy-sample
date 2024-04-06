@@ -1,0 +1,30 @@
+{
+  "name": "static-website-gh-pages-sample",
+  "version": "0.0.1",
+  "description": "Boilerplate at the time of my project creation.",
+  "license": "MIT",
+  "author": {
+    "name": "Ryo Takeuchi",
+    "url": "https://tatsutakein.jp"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "clean": "git clean -xdf node_modules",
+    "preview": "astro preview",
+    "astro": "astro",
+    "plop": "plop"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.5.10",
+    "astro": "4.5.16"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.2.1",
+    "@commitlint/config-conventional": "19.1.0",
+    "plop": "4.0.1",
+    "typescript": "5.4.4"
+  }
+}

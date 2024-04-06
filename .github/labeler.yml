@@ -1,0 +1,84 @@
+# noinspection YAMLSchemaValidation
+version: 1
+
+labels:
+  # Type labels
+  - label: "@type/build"
+    title: '^build(?:\(.+\))?\!?:'
+
+  - label: "@type/ci"
+    title: '^ci(?:\(.+\))?\!?:'
+    files:
+      - '\.github/.+'
+      - "scripts/.+"
+      - "tools/.+"
+
+  - label: "@type/docs"
+    title: '^docs(?:\(.+\))?\!?:'
+    files:
+      - "docs/.+"
+      - "**/README.md$"
+
+  - label: "@type/feature"
+    title: '^feat(?:\(.+\))?\!?:'
+
+  - label: "@type/fix"
+    title: '^fix(?:\(.+\))?\!?:'
+
+  - label: "@type/improve"
+    title: '^(style|refactor|perf)(?:\(.+\))?\!?:'
+
+  # Top Package labels
+  - label: "@apps/backend"
+    files:
+      - "apps/backend/.+"
+
+  - label: "@apps/frontend"
+    files:
+      - "apps/frontend/.+"
+
+  # Core Package labels
+  - label: "@core/common"
+    files:
+      - "core/common/.+"
+
+  - label: "@core/data"
+    files:
+      - "core/data/.+"
+
+  - label: "@core/database"
+    files:
+      - "core/database/.+"
+
+  - label: "@core/datastore"
+    files:
+      - "core/datastore/.+"
+
+  - label: "@core/designsystem"
+    files:
+      - "core/designsystem/.+"
+
+  - label: "@core/domain"
+    files:
+      - "core/domain/.+"
+
+  - label: "@core/model"
+    files:
+      - "core/model/.+"
+
+  - label: "@core/network"
+    files:
+      - "core/network/.+"
+
+  - label: "@core/testing"
+    files:
+      - "core/testing/.+"
+
+  # Feature Package labels
+  - label: "@feature/top"
+    files:
+      - "feature/top/.+"
+
+  - label: "@feature/auth"
+    files:
+      - "feature/auth/.+"

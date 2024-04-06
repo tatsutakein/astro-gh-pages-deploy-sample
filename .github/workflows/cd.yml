@@ -1,0 +1,18 @@
+name: 'Continuous Delivery'
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: cd-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    uses: ./.github/workflows/wc-release.yml
+    with:
+      gh-app-id: ${{ vars.BOT_APP_ID }}
+    secrets:
+      gh-app-private-key: ${{ secrets.BOT_PRIVATE_KEY }}
