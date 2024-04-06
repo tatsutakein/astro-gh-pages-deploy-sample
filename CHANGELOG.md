@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.5.2...v0.6.0) (2024-04-06)
+
+
+### Features
+
+* ！マークを追加 ([4f33e60](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/commit/4f33e60a33254b629cd62a321445351028ffc2bc))
+
 ## [0.5.2](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.5.1...v0.5.2) (2024-04-06)
 
 
