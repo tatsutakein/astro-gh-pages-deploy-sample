@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.4.1...v0.5.0) (2024-04-06)
+
+
+### Features
+
+* Initial commit ([4283bd1](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/commit/4283bd116a79b5fde0818694df734a323c206f5a))
+* デプロイワークフローを追加 ([aeafd42](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/commit/aeafd422411ef45417386dd07be2eaf98afcb0df))
+
 ## [0.4.1](https://github.com/tatsutakein/project-boilerplate/compare/v0.4.0...v0.4.1) (2024-03-05)
 
 
