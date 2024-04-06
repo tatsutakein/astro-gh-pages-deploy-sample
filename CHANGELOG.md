@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.6.0...v0.6.1) (2024-04-06)
+
+
+### Bug Fixes
+
+* create-github-app-token repository ([a807b30](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/commit/a807b308557b4d132087b36d1711fa24caee9d30))
+
 ## [0.6.0](https://github.com/tatsutakein/astro-gh-pages-deploy-sample/compare/v0.5.2...v0.6.0) (2024-04-06)
 
 
